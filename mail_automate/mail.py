@@ -15,7 +15,8 @@ from email import encoders
 from concurrent.futures import ThreadPoolExecutor
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-
+from huggingface_hub import login
+login()  #insert token name
 def getLLMResponse(form_input, email_sender, email_recipient, email_style, Yourname):
     model_name = "mistralai/Mistral-7B-Instruct-v0.3"
     tokenizer = AutoTokenizer.from_pretrained(model_name,device_map='cuda')
