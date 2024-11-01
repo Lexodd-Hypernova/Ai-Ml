@@ -1,0 +1,6 @@
+pip install langchain-community langchain-core
+pip install ctransformers
+pip install huggingface
+pip install -U "huggingface_hub[cli]"
+pip install transformers
+pip install -U bitsandbytes
