@@ -15,8 +15,13 @@ from email import encoders
 from concurrent.futures import ThreadPoolExecutor
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+<<<<<<< HEAD
 from transformers.models.markuplm.modeling_markuplm import MarkupLMPredictionHeadTransform
 import os
+=======
+from huggingface_hub import login
+login()  #insert token name
+>>>>>>> 839e090b7bd5f469d4d680725914c3bc8e0b9b94
 def getLLMResponse(form_input, email_sender, email_recipient, email_style, Yourname):
     model_name = "mistralai/Mistral-7B-Instruct-v0.3"
     tokenizer = AutoTokenizer.from_pretrained(model_name,device_map='cuda')
@@ -125,6 +130,7 @@ def main():
           name=j,
           pdf_path=pdf_path  
       )
+<<<<<<< HEAD
     df=pd.read_excel(sys.argv[1])
     Marked=[True]*(df.shape[0])
     df["Marked"]=Marked
@@ -135,3 +141,6 @@ def main():
 main()
 #how to run
 #!python /content/mail.py  /content/LexoddContactSheet.xlsx /content/NTT.pdf
+=======
+main()
+>>>>>>> 839e090b7bd5f469d4d680725914c3bc8e0b9b94
