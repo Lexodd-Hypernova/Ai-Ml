@@ -1,9 +1,11 @@
 pip install langchain-community langchain-core
 pip install ctransformers
 pip install huggingface
+pip install pandas
 pip install -U "huggingface_hub[cli]"
 pip install transformers
 pip install -U bitsandbytes
 pip install xlsxwriter
 pip install xlsxwriter
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client pandas
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client 
+
